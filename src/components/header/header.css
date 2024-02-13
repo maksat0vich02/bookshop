@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+header {
+  box-shadow: 0 0 5px 0 grey;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  margin-left: 15px;
+  font-size: 18px;
+}
+nav h4 {
+  font-size: 20px;
+  color: rgb(26, 163, 204);
+}
+.header-btn {
+  font-size: 22px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header-btn-two {
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
