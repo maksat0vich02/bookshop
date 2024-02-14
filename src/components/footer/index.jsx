@@ -24,7 +24,6 @@ const Footer = () => {
               <p>Lorem</p>
               <p>Lorem</p>
               <p>Lorem</p>
-              <p>Lorem</p>
             </div>
             <div className="footer-two">
               <h4>Lorem Ipsum</h4>
