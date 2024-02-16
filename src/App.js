@@ -1,20 +1,32 @@
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { useMainContext } from "./Context/MainContext";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Home from "./pages/Home";
-import HomeGenres from "./pages/Home/HomeGenres";
-import NewBook from "./pages/Home/NewBook";
-import About from "./pages/Home/about";
-import Books from "./pages/Home/books-home";
+import Read from "./pages/Home/book-all/read";
+import Search from "./pages/Home/seacrh";
 
 function App() {
+  const { darkMode } = useMainContext();
+  const [getPull, setGetPull] = useState("");
+
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <HomeGenres />
-      <NewBook />
-      <Books />
-      <About />
+    <div
+      style={{
+        background: darkMode ? "black" : "white",
+        color: darkMode ? "white" : "black",
+        objectFit: "cover",
+        transition: "1s",
+      }}
+      className="App"
+    >
+      <Header pullValue={setGetPull} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/read" element={<Read />} />
+        <Route path="/search" element={<Search getPush={getPull} />} />
+      </Routes>
       <Footer />
     </div>
   );
