@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 import { data } from "../../../bookKey";
 
 const Books = () => {
@@ -9,7 +9,14 @@ const Books = () => {
           <div className="book">
             <div className="books_text">
               <h1>Books</h1>
-              <p>View all</p>
+              <NavLink
+                to="/read"
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                View all
+              </NavLink>
             </div>
             <div className="book_display">
               {data.map((el) => (

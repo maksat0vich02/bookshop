@@ -1,4 +1,8 @@
 import React from "react";
+import HomeGenres from "./HomeGenres";
+import NewBook from "./NewBook";
+import Books from "./books-home";
+import About from "./about";
 
 const Home = () => {
   return (
@@ -21,6 +25,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <HomeGenres />
+      <NewBook />
+      <Books />
+      <About />
     </>
   );
 };
