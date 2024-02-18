@@ -28,7 +28,7 @@ function App() {
         <Route path="/read" element={<Read />} />
         <Route path="/search" element={<Search getPush={getPull} />} />
         <Route path="/book/detailBook/:id" element={<DetailBook />} />
-        <Route path="/book/basket/booksId" element={}/>
+        {/* <Route path="/book/basket/booksId" element={}/> */}
       </Routes>
       <Footer />
     </div>
