@@ -76,6 +76,7 @@ const DetailBook = () => {
                         +
                       </button>
                       <button>basket</button>
+                      <h1>Beksultan</h1>
                     </div>
                   </div>
                 </div>
