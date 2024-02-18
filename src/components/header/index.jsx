@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaCartShopping } from "react-icons/fa6";
+import { VscAccount } from "react-icons/vsc";
 import { useMainContext } from "../../Context/MainContext";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -26,7 +27,13 @@ const Header = ({ pullValue }) => {
         <div className="container">
           <div className="header">
             <nav>
-              <h4>Bookshop</h4>
+              <h4
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                Bookshop
+              </h4>
               <NavLink
                 style={{
                   fontSize: "18px",
@@ -89,6 +96,15 @@ const Header = ({ pullValue }) => {
               >
                 About us
               </a>
+              <NavLink
+                style={{
+                  fontSize: "18px",
+                  color: darkMode ? "white" : "black",
+                }}
+                to={"/gategory"}
+              >
+                Gategory
+              </NavLink>
             </nav>
 
             <div className="header-btn">
@@ -103,6 +119,14 @@ const Header = ({ pullValue }) => {
                   type="text"
                   placeholder="search . . ."
                 />
+              </button>
+              <button
+                onClick={() => {
+                  navigate("/admin");
+                }}
+                className="adminBtn"
+              >
+                <VscAccount />
               </button>
               <button className="header-btn-two">
                 <FaCartShopping />

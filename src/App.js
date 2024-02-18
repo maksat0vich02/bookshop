@@ -6,6 +6,8 @@ import Header from "./components/header";
 import Home from "./pages/Home";
 import Read from "./pages/Home/book-all/read";
 import Search from "./pages/Home/seacrh";
+import Admin from "./pages/Home/Admin";
+import Gategory from "./pages/Home/Gategory";
 
 function App() {
   const { darkMode } = useMainContext();
@@ -26,6 +28,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/read" element={<Read />} />
         <Route path="/search" element={<Search getPush={getPull} />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/gategory" element={<Gategory />} />
       </Routes>
       <Footer />
     </div>

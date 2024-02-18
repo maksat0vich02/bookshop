@@ -19,6 +19,7 @@ nav a {
   font-size: 18px;
 }
 nav h4 {
+  cursor: pointer;
   font-size: 20px;
   color: rgb(26, 163, 204);
 }
@@ -60,4 +61,10 @@ nav h4 {
   padding: 8px 10px;
   border-radius: 10px;
   border: none;
+}
+.adminBtn {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

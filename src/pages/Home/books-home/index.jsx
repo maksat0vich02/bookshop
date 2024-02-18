@@ -1,7 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { data } from "../../../bookKey";
+import { useEffect, useState } from "react";
 
 const Books = () => {
+  const [get, setGet] = useState([]);
+  function createData() {
+    let storage = JSON.parse(localStorage.getItem("book")) || [];
+    setGet(storage);
+  }
+  useEffect(() => {
+    createData();
+  }, []);
   return (
     <div>
       <book>
