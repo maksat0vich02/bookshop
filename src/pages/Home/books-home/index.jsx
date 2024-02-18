@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { data } from "../../../bookKey";
 
 const Books = () => {
@@ -21,7 +21,10 @@ const Books = () => {
             <div className="book_display">
               {data.map((el) => (
                 <div className="book_div">
-                  <img src={el.image} alt="img-one" />
+                  <Link to={`/book/detailBook/${el.id}`}>
+                    {" "}
+                    <img src={el.image} alt="img-one" />
+                  </Link>
                   <h1>{el.name}</h1>
                   <p>{el.surName}</p>
                 </div>
