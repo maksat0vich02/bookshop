@@ -6,6 +6,7 @@ import Header from "./components/header";
 import Home from "./pages/Home";
 import Read from "./pages/Home/book-all/read";
 import Search from "./pages/Home/seacrh";
+import DetailBook from "./pages/Home/detailBook";
 
 function App() {
   const { darkMode } = useMainContext();
@@ -26,6 +27,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/read" element={<Read />} />
         <Route path="/search" element={<Search getPush={getPull} />} />
+        <Route path="/book/detailBook/:id" element={<DetailBook />} />
+        <Route path="/book/basket/booksId" element={}/>
       </Routes>
       <Footer />
     </div>

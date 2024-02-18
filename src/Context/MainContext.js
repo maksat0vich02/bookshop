@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const mainContext = createContext();
+
 export const useMainContext = () => useContext(mainContext);
 const DarkMode = JSON.parse(localStorage.getItem("dark_mode"));
 const MainContext = ({ children }) => {
@@ -8,6 +9,7 @@ const MainContext = ({ children }) => {
   function setStirage() {
     localStorage.setItem("dark_mode", JSON.stringify(darkMode));
   }
+
   const values = {
     darkMode,
     setDarkMode,
